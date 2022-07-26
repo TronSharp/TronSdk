@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Authors>TronSharp</Authors>
+		<Version>1.2.0</Version>
+		<PackageTags>tron,trx,wallet,tron protocol,tron grpc</PackageTags>
+		<PackageProjectUrl>https://github.com/TronSharp/TronSdk</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/TronSharp/TronSdk</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Portable.BouncyCastle" Version="1.8.9" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\TronSdk.Protocol\TronSdk.Protocol.csproj" />
+	</ItemGroup>
+
+</Project>

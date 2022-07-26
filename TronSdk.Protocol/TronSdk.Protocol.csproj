@@ -4,6 +4,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Version>1.2.0</Version>
+        <PackageTags>tron,trx,wallet,tron protocol,tron grpc</PackageTags>
+        <PackageProjectUrl>https://github.com/TronSharp/TronSdk</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/TronSharp/TronSdk</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -21,5 +25,23 @@
 	<ItemGroup>
 		<Protobuf Include="Protos\api\api.proto" GrpcServices="Client" />
 		<Protobuf Include="Protos\api\zksnark.proto" GrpcServices="Client" />
+        <Protobuf Include="Protos\google\api\annotations.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\google\api\http.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\google\protobuf\descriptor.proto" GrpcServices="Client" />
+        <Protobuf Include="Protos\core\contract\account_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\asset_issue_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\balance_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\common.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\exchange_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\market_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\proposal_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\shield_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\smart_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\storage_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\vote_asset_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\contract\witness_contract.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\Discover.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\Tron.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\core\TronInventoryItems.proto" GrpcServices="Client" />
 	</ItemGroup>
 </Project>
