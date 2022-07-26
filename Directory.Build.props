@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <LangVersion Condition="$(MSBuildProjectExtension)=='.csproj'">preview</LangVersion>
+    <WarningsAsErrors>
+      NU1608,   <!--Detected package version outside of dependency constraint: PackageA requires PackageB (>= 2.0 && < 2.1) but version 2.2 was resolved-->
+      NU1605,   <!--Different version of package used-->
+      CS4014,   <!--Async function not awaited-->
+    </WarningsAsErrors>
+
+    <MSBuildWarningsAsErrors>
+      MSB3277;  <!--Conflicts between different versions of the same dependent assembly-->
+      MSB3276;  <!--Conflicts between different versions of the same dependent assembly-->
+      MSB3243;  <!--Found conflicts between different versions of assembly-->
+      MSB3836;  <!--The explicit binding redirect conflicts with an auto-generated binding redirect-->
+    </MSBuildWarningsAsErrors>
+  </PropertyGroup>
+</Project>
