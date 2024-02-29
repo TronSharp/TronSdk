@@ -4,7 +4,7 @@ The dotnet C# SDK to manipulate your tron wallet for usdt/trx on trc20 chain.
 
 # Get Started
 
-You will need at least .net 8.0 to use this package
+You will need at least .net 6.0 to use this package
 
 ## Installation via Nuget
 
