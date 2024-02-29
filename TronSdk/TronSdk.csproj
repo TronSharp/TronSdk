@@ -10,9 +10,11 @@
 		<PackageProjectUrl>https://github.com/TronSharp/TronSdk</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/TronSharp/TronSdk</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="../README.md" Pack="true" PackagePath="\"/>
 		<PackageReference Include="Portable.BouncyCastle" Version="1.8.9" />
 	</ItemGroup>
 
