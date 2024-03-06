@@ -25,9 +25,6 @@ Once registered, you can create a key here https://www.trongrid.io/dashboard/key
 Create a file TronServiceExtension.cs with the content below
 
 ```
-public record TronRecord(IServiceProvider ServiceProvider,
-  ITronClient? TronClient, IOptions<TronNetOptions>? Options);
-
 public static class TronServiceExtension
 {
   public static IServiceCollection AddTronService(this IServiceCollection services) {
@@ -38,13 +35,6 @@ public static class TronServiceExtension
       x.ApiKey = "Your TronGrid API key";
     });
     return services;
-  }
-
-  public static TronRecord GetTronRecord(this IServiceProvider provider) {
-    var client = provider.GetService<ITronClient>();
-    var options = provider.GetService<IOptions<TronNetOptions>>();
-
-    return new TronRecord(provider, client, options);
   }
 }
 ```
@@ -77,8 +67,7 @@ public class MyController {
     string toAddress, decimal amount, string? memo = null) {
     const string contractAddress = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t";
 
-    var record = _serviceProvider.GetTronRecord();
-    var contractClientFactory = record.ServiceProvider.GetService<IContractClientFactory>();
+    var contractClientFactory = _serviceProvider.GetService<IContractClientFactory>();
     var contractClient = contractClientFactory?.CreateClient(ContractProtocol.TRC20)!;
 
     var account = new TronAccount(privateKey, TronNetwork.MainNet);
@@ -96,8 +85,7 @@ public class MyController {
   /// <param name="to">address to transfer to</param>
   /// <param name="amount">the amount of trx to transfer</param>
   private static async Task<dynamic> TrxTransferAsync(string privateKey, string to, long amount) {
-    var record = _serviceProvider.GetTronRecord();
-    var transactionClient = record.TronClient?.GetTransaction();
+    var transactionClient = _serviceProvider.GetService<ITronClient>();
 
     var account = new TronAccount(privateKey, TronNetwork.MainNet);
 
