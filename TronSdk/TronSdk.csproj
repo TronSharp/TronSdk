@@ -5,12 +5,13 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Authors>TronSharp</Authors>
-		<Version>1.2.1</Version>
+		<Version>1.2.3</Version>
 		<PackageTags>tron,trx,wallet,tron protocol,tron grpc</PackageTags>
 		<PackageProjectUrl>https://github.com/TronSharp/TronSdk</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/TronSharp/TronSdk</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+        <Description>.NET Core SDK to manipulate Tron wallet, for example transferring usdt to another wallet</Description>
 	</PropertyGroup>
 
 	<ItemGroup>
